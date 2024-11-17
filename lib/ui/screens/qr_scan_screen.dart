@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../widgets.dart';
@@ -22,9 +23,33 @@ class _QrScanScreenState extends State<QrScanScreen> {
           children: [
             Positioned.fill(
               child: MobileScanner(
-                onDetect: (barcode) {
+                onDetect: (value) {
+                  if (value.barcodes.isEmpty) return;
                   if (!_isScanning) return;
                   _isScanning = false;
+
+                  final barcode = value.barcodes.first;
+
+                  ScaffoldMessenger.of(context)
+                      .showSnackBar(
+                        SnackBar(
+                          content: Text('QR-код: ${barcode.rawValue}'),
+                          action: SnackBarAction(
+                            label: 'Скопировать',
+                            onPressed: () {
+                              ScaffoldMessenger.of(context)
+                                  .hideCurrentSnackBar();
+                              Clipboard.setData(ClipboardData(
+                                text: barcode.rawValue ?? '',
+                              ));
+                            },
+                          ),
+                        ),
+                      )
+                      .closed
+                      .then((reason) {
+                    _isScanning = true;
+                  });
                 },
               ),
             ),
