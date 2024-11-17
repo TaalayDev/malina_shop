@@ -4,27 +4,28 @@ Malina Shop is a modern e-commerce mobile application that combines food deliver
 
 ## Features
 
-### Home Screen
-- Modern card-based UI with animated transitions
-- Quick access categories for food and beauty products
-- QR code scanning for in-store ordering
+### Screens
 
-![Home Screen](screenshots/screenshot_1.png)
-
-### Shopping Cart
-- Dual-mode cart system (Food & Products)
-- Real-time price calculations
-- Quantity adjustment controls
-- Store grouping for multiple vendors
-- Add extras/modifications for food items
-
-![Cart Screen](screenshots/screenshot_2.png)
-
-### Navigation
-- QR scanner quick access
-- Split cart functionality for food and products
-- Favorites section
-- User profile management
+<table>
+  <tr>
+    <td><img src="screenshots/screenshot_1.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_2.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_3.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_4.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/screenshot_5.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_6.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_7.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_8.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/screenshot_9.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_10.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_11.png" width="200"/></td>
+    <td><img src="screenshots/screenshot_12.png" width="200"/></td>
+  </tr>
+</table>
 
 ## Technical Stack
 
